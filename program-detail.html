@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>প্রোগ্রাম বিস্তারিত ও বিষয় নির্বাচন | SCIENTICA Academic Care</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#00897b',
+              tealDark: '#00695c',
+              tealLight: '#e0f2f1',
+              red: '#e53935',
+              redHover: '#d32f2f',
+              navy: '#12122b',
+              purple: '#2d1133',
+              gold: '#ffb300'
+            }
+          },
+          fontFamily: {
+            bangla: ['Hind Siliguri', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Hind Siliguri', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-bangla flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span>🎓 খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত | শুরু: <strong class="text-amber-300">১০ জানুয়ারি, ২০২৭</strong> | হেল্পলাইন: <strong class="font-en text-white">01992-312710</strong></span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-slate-900 to-brand-teal flex items-center justify-center text-white shadow-md shadow-brand-teal/20 border border-brand-teal/30">
+            <i data-lucide="atom" class="w-6 h-6 text-emerald-300"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none group-hover:text-brand-teal transition-colors font-en">
+              SCIENTICA <span class="text-brand-teal font-bold text-sm sm:text-base">Academic Care</span>
+            </span>
+            <span class="text-[10px] sm:text-[11px] text-slate-500 font-medium tracking-wide mt-1">
+              খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+          <a href="index.html" class="hover:text-brand-teal transition-colors">হোম</a>
+          <a href="program-detail.html?class=9" id="nav-class-9" class="hover:text-brand-teal transition-colors">৯ম শ্রেণি</a>
+          <a href="program-detail.html?class=10" id="nav-class-10" class="hover:text-brand-teal transition-colors">১০ম শ্রেণি</a>
+          <a href="enroll.html?package=trial&fee=0" class="text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3 py-1 rounded-full transition-colors flex items-center gap-1 border border-emerald-200">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>ফ্রী ক্লাস ট্রায়াল</span>
+          </a>
+        </nav>
+
+        <!-- Right Quick Action -->
+        <div class="flex items-center gap-3">
+          <a href="tel:01992312710" class="hidden sm:inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-3.5 py-2 rounded-xl border border-slate-200 transition-colors font-en">
+            <i data-lucide="phone" class="w-4 h-4 text-brand-teal"></i>
+            <span>01992-312710</span>
+          </a>
+          <a href="enroll.html" class="bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full shadow-sm hover:shadow transition-all">
+            ভর্তি আবেদন
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-2">
+      <a href="index.html" class="block py-1.5 text-slate-700 font-medium">হোম</a>
+      <a href="program-detail.html?class=9" class="block py-1.5 text-slate-700 font-medium">৯ম শ্রেণি একাডেমিক</a>
+      <a href="program-detail.html?class=10" class="block py-1.5 text-slate-700 font-medium">১০ম শ্রেণি একাডেমিক</a>
+      <a href="enroll.html?package=trial&fee=0" class="block py-1.5 text-emerald-600 font-bold">ফ্রী ক্লাস ট্রায়াল</a>
+      <a href="tel:01992312710" class="block py-1.5 text-slate-700 font-bold font-en">01992-312710</a>
+    </div>
+  </header>
+
+  <!-- Main Content Layout (2-Column Pattern) -->
+  <main class="flex-grow py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb & Program Title Header -->
+      <div class="mb-8">
+        <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-3">
+          <a href="index.html" class="hover:text-brand-teal transition-colors">হোম</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          <span class="text-slate-400">একাডেমিক প্রোগ্রাম</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          <span id="breadcrumb-class" class="text-brand-teal font-semibold">১০ম শ্রেণি একাডেমিক প্রোগ্রাম</span>
+        </nav>
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h1 id="program-main-title" class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+              ১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base mt-1.5 flex items-center gap-2 flex-wrap">
+              <span class="bg-brand-red text-white text-xs font-bold px-2.5 py-0.5 rounded">বাংলা / ইংরেজি ভার্সন</span>
+              <span class="font-bold text-amber-600">A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা</span>
+            </p>
+          </div>
+
+          <!-- Class Switcher Pill Toggle -->
+          <div class="inline-flex items-center p-1 bg-slate-200/80 rounded-2xl shrink-0 self-start md:self-auto border border-slate-300/60">
+            <button id="switch-class-9" onclick="switchClass(9)" class="px-4 py-1.5 rounded-xl text-sm font-bold transition-all text-slate-600 hover:text-slate-900">
+              ৯ম শ্রেণি
+            </button>
+            <button id="switch-class-10" onclick="switchClass(10)" class="px-4 py-1.5 rounded-xl text-sm font-bold transition-all bg-white text-brand-teal shadow-sm">
+              ১০ম শ্রেণি
+            </button>
+          </div>
+        </div>
+
+        <!-- Badges Bar -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 mt-4 text-xs font-semibold">
+          <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full border border-indigo-200 flex items-center gap-1">
+            <i data-lucide="calendar" class="w-3 h-3"></i>
+            শুরু: ১০ জানুয়ারি, ২০২৭
+          </span>
+          <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
+            <i data-lucide="gift" class="w-3 h-3 text-emerald-600"></i>
+            ফ্রী ক্লাস করে ভর্তি হওয়ার সুযোগ
+          </span>
+          <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full border border-purple-200 flex items-center gap-1">
+            <i data-lucide="clock" class="w-3 h-3"></i>
+            ব্যাচ ডে: (শনি-সোম-বুধ) / (রবি-মঙ্গল-বৃহস্পতি)
+          </span>
+          <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full border border-amber-200 flex items-center gap-1">
+            <i data-lucide="map-pin" class="w-3 h-3"></i>
+            বয়রা, খুলনা
+          </span>
+        </div>
+      </div>
+
+      <!-- 2-Column Responsive Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        
+        <!-- ================= LEFT COLUMN: COURSE CONTENT (8 Cols) ================= -->
+        <div class="lg:col-span-8 space-y-8">
+          
+          <!-- 1. Hero Preview: Official Poster Showcase -->
+          <div class="rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white shadow-xl border border-slate-700 p-6 sm:p-8">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+              
+              <!-- Poster Image Frame -->
+  
+
+              <!-- Banner Details -->
+              <div class="space-y-3 text-center sm:text-left">
+                <span class="inline-block bg-brand-red text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                  বাংলা ও ইংরেজি ভার্সন
+                </span>
+                <h2 id="banner-course-heading" class="text-2xl sm:text-3xl font-black text-white leading-tight">
+                  ১০ম শ্রেণি একাডেমিক ফুল কোর্স ২০২৭
+                </h2>
+                <p class="text-amber-300 font-bold text-sm">
+                  “A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা”
+                </p>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  পদার্থবিজ্ঞান, রসায়ন, গণিত, উচ্চতর গণিত, জীববিজ্ঞান ও আইসিটি। খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থীদের সরাসরি দিকনির্দেশনা ও তত্ত্বাবধানে পরিচালিত।
+                </p>
+                <div class="pt-1 flex flex-wrap gap-2 justify-center sm:justify-start">
+                  <span class="bg-white/10 text-slate-200 text-xs px-2.5 py-1 rounded-lg">
+                    সাপ্তাহিক ও মাসিক এক্সাম
+                  </span>
+                  <span class="bg-white/10 text-slate-200 text-xs px-2.5 py-1 rounded-lg">
+                    অনলাইন পোর্টাল সুবিধা
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2. Interactive Enrollment Option Builder -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            
+            <div class="border-b border-slate-100 pb-4">
+              <span class="text-xs font-bold text-brand-teal uppercase tracking-wider">কোর্স প্ল্যান ও বিষয় নির্বাচন</span>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-0.5">
+                আপনার পছন্দের ভর্তি প্ল্যান বেছে নিন
+              </h3>
+              <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                শিক্ষার্থী তার প্রয়োজন ও পছন্দ অনুযায়ী ফুল কোর্সে ভর্তি হতে পারবে অথবা যেকোনো বিষয়ে আলাদাভাবে যুক্ত হতে পারবে।
+              </p>
+            </div>
+
+            <!-- 3-Option Mode Selector -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              
+              <!-- Option 1: Free Trial -->
+              <label class="cursor-pointer">
+                <input type="radio" name="enrollment_mode" value="trial" onchange="onModeChange('trial')" class="peer sr-only">
+                <div class="h-full p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/50 peer-checked:border-emerald-600 peer-checked:bg-emerald-50/60 peer-checked:shadow-sm transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">ফ্রী ট্রায়াল</span>
+                      <i data-lucide="sparkles" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-base">ফ্রী ক্লাস করে ভর্তি</h4>
+                    <p class="text-xs text-slate-500 mt-1">কোনো অগ্রিম ফি ছাড়া ক্লাস যাচাই করার সুযোগ</p>
+                  </div>
+                  <div class="mt-4 pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                    <span class="text-xs font-semibold text-slate-400">কোর্স ফি</span>
+                    <span class="text-lg font-black text-emerald-700 font-en">৳0</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- Option 2: Full Course Combo (Default) -->
+              <label class="cursor-pointer">
+                <input type="radio" name="enrollment_mode" value="full" checked onchange="onModeChange('full')" class="peer sr-only">
+                <div class="h-full p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/50 peer-checked:border-brand-teal peer-checked:bg-teal-50/60 peer-checked:shadow-sm transition-all flex flex-col justify-between relative overflow-hidden">
+                  <div class="absolute top-0 right-0 bg-brand-gold text-slate-900 text-[10px] font-black px-2 py-0.5 rounded-bl-lg uppercase">
+                    সেরা সাশ্রয়ী
+                  </div>
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-bold bg-teal-100 text-brand-tealDark px-2 py-0.5 rounded-md">সকল ৬টি বিষয়</span>
+                      <i data-lucide="award" class="w-4 h-4 text-brand-teal"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-base">ফুল কম্বো কোর্স</h4>
+                    <p class="text-xs text-slate-500 mt-1">সব বিষয়ের পূর্ণাঙ্গ প্রস্তুতি + ১০০০৳ ছাড়</p>
+                  </div>
+                  <div class="mt-4 pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                    <span class="text-xs line-through text-slate-400 font-en">৳6,000</span>
+                    <span class="text-lg font-black text-brand-teal font-en">৳5,000</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- Option 3: Custom Subjects Selection -->
+              <label class="cursor-pointer">
+                <input type="radio" name="enrollment_mode" value="custom" onchange="onModeChange('custom')" class="peer sr-only">
+                <div class="h-full p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/50 peer-checked:border-brand-red peer-checked:bg-rose-50/60 peer-checked:shadow-sm transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-bold bg-rose-100 text-rose-800 px-2 py-0.5 rounded-md">পছন্দমতো</span>
+                      <i data-lucide="layers" class="w-4 h-4 text-brand-red"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-base">বিষয়ভিত্তিক ভর্তি</h4>
+                    <p class="text-xs text-slate-500 mt-1">প্রয়োজন অনুযায়ী যেকোনো বিষয় নিন</p>
+                  </div>
+                  <div class="mt-4 pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                    <span class="text-xs font-semibold text-slate-400">প্রতি বিষয়</span>
+                    <span class="text-lg font-black text-brand-red font-en">৳1,000</span>
+                  </div>
+                </div>
+              </label>
+
+            </div>
+
+            <!-- Subject Checkboxes Container -->
+            <div id="subject-selection-container" class="space-y-3 pt-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-slate-800">
+                  উপলব্ধ বিষয়সমূহ (<span id="subject-count-badge" class="font-en text-brand-teal font-bold">৬</span>টি বিষয় নির্বাচিত):
+                </span>
+                <span id="subject-mode-hint" class="text-xs font-medium text-slate-500">
+                  ফুল কম্বো কোর্সে সকল বিষয় অন্তর্ভুক্ত রয়েছে
+                </span>
+              </div>
+
+              <!-- Subject Checkbox Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                
+                <!-- Subject 1: Physics -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="পদার্থবিজ্ঞান" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">পদার্থবিজ্ঞান</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+                <!-- Subject 2: Chemistry -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="রসায়ন" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">রসায়ন</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+                <!-- Subject 3: General Math -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="গণিত" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">গণিত</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+                <!-- Subject 4: Higher Math -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="উচ্চতর গণিত" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">উচ্চতর গণিত</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+                <!-- Subject 5: Biology -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="জীববিজ্ঞান" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">জীববিজ্ঞান</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+                <!-- Subject 6: ICT -->
+                <label class="subject-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" name="subject_item" value="তথ্য ও যোগাযোগ প্রযুক্তি" data-fee="1000" checked onchange="updateSubjectSelection()" class="w-4 h-4 text-brand-teal rounded border-slate-300 focus:ring-brand-teal">
+                    <span class="text-sm font-bold text-slate-800">তথ্য ও যোগাযোগ প্রযুক্তি</span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-500 font-en">৳1,000</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3. What You Get (অনলাইন ও অফলাইন সুবিধাসমূহ) -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900">
+              কোর্সে যা যা থাকছে (Course Plan & Facilities)
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm sm:text-base text-slate-700">
+              
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>শিক্ষার্থী অনলাইন পোর্টাল:</strong> ক্লাস, পরীক্ষা, ক্লাস নোট ও ফলাফল সরাসরি পোর্টালে দেখার সুবিধা</span>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>অভিভাবক পোর্টাল:</strong> সন্তানের ক্লাসে উপস্থিতি ও পরীক্ষার ফলাফল তাৎক্ষণিক নোটিফিকেশন</span>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>বহুমাত্রিক এক্সাম:</strong> সাপ্তাহিক, মাসিক, প্র্যাকটিস MCQ এবং সাবজেক্ট ফাইনাল এক্সাম</span>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>ফ্লেক্সিবল ব্যাচ ডে:</strong> (শনি-সোম-বুধ) অথবা (রবি-মঙ্গল-বৃহস্পতি) ব্যাচ সুবিধা</span>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>খুলনা বিশ্ববিদ্যালয়ের শিক্ষক প্যানেল:</strong> অভিজ্ঞ ও মেধাবী ইন্সট্রাক্টর দ্বারা সার্বক্ষণিক গাইডেন্স</span>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]"></i>
+                <span><strong>ফ্রী ক্লাস ট্রায়াল:</strong> অগ্রিম কোনো ফি ছাড়া ক্লাস করে ভর্তি হওয়ার সুযোগ</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 4. About This Course -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900">
+              কোর্স সম্পর্কিত বিস্তারিত (About Course)
+            </h3>
+            
+            <div id="course-desc-content" class="text-sm sm:text-base text-slate-600 leading-relaxed space-y-3">
+              <p>
+                ১) <strong>মূল লক্ষ্য:</strong> “A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা” — শিক্ষার্থীদের মুখস্থ নির্ভরতা কাটিয়ে প্রতিটি বিষয়ের মূল থিম স্পষ্ট করে গড়ে তোলা।
+              </p>
+              <p>
+                ২) <strong>ভার্সন:</strong> বাংলা ভার্সন এবং ইংরেজি ভার্সন উভয় মাধ্যমের শিক্ষার্থীদের জন্য আলাদা স্পেশালাইজড ব্যাচ রয়েছে।
+              </p>
+              <p>
+                ৩) <strong>মূল্যায়ন পদ্ধতি:</strong> নিয়মিত প্র্যাকটিস MCQ, চ্যাপ্টারভিত্তিক সিকিউ এবং বোর্ড স্ট্যান্ডার্ড প্রশ্নপত্রে সাবজেক্ট ফাইনাল এক্সাম অনুষ্ঠিত হয়।
+              </p>
+              <div id="course-desc-more" class="hidden space-y-3 pt-1">
+                <p>
+                  ৪) <strong>পরিচালনায়:</strong> খুলনা বিশ্ববিদ্যালয়ের সংশ্লিষ্ট বিভাগের সেরা শিক্ষার্থীদের দ্বারা প্রতিটি ক্লাস ও কনসেপ্ট পরিচালিত হয়।
+                </p>
+                <p>
+                  ৫) <strong>অফিস ঠিকানা:</strong> ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা (হেল্পলাইন: 01992-312710)।
+                </p>
+              </div>
+            </div>
+
+            <button id="desc-toggle-btn" onclick="toggleDescription()" class="text-brand-teal font-bold text-sm inline-flex items-center gap-1 hover:underline pt-1">
+              <span>আরও দেখুন (Show more)</span>
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+
+
+        <!-- ================= RIGHT COLUMN: STICKY CHECKOUT CARD (4 Cols) ================= -->
+        <div class="lg:col-span-4 sticky-sidebar">
+          
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl space-y-6">
+            
+            <!-- Pricing Header -->
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-baseline gap-2">
+                  <span id="card-price-display" class="text-3xl sm:text-4xl font-black text-slate-900 font-en">
+                    ৳5,000
+                  </span>
+                  <span id="card-original-price" class="text-base text-slate-400 line-through font-en">
+                    ৳6,000
+                  </span>
+                </div>
+                <span id="card-save-badge" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-200">
+                  সেভ ৳1,000
+                </span>
+              </div>
+              <p id="card-pricing-subtitle" class="text-xs text-slate-500 font-medium mt-1">
+                ফুল কম্বো কোর্স (সকল ৬টি বিষয় অন্তর্ভুক্ত)
+              </p>
+            </div>
+
+            <!-- Selected Subjects Chips -->
+            <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-600">
+                <span>নির্বাচিত বিষয়সমূহ:</span>
+                <span id="selected-badge-count" class="font-en text-brand-teal font-bold">৬ টি</span>
+              </div>
+              <div id="selected-chips-box" class="flex flex-wrap gap-1.5 pt-1">
+                <!-- Chips -->
+              </div>
+            </div>
+
+            <!-- Course Meta Specs -->
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600 border-t border-b border-slate-100 py-4">
+              <li class="flex items-center justify-between">
+                <span class="flex items-center gap-2 text-slate-500">
+                  <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i>
+                  <span>শুরুর তারিখ:</span>
+                </span>
+                <span class="font-bold text-slate-800 text-brand-red">১০ জানুয়ারি, ২০২৭</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="flex items-center gap-2 text-slate-500">
+                  <i data-lucide="clock" class="w-4 h-4 text-slate-400"></i>
+                  <span>ব্যাচ ডে:</span>
+                </span>
+                <span class="font-bold text-slate-800">শনি-সোম-বুধ / রবি-মঙ্গল-বৃহস্পতি</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="flex items-center gap-2 text-slate-500">
+                  <i data-lucide="globe" class="w-4 h-4 text-slate-400"></i>
+                  <span>ভার্সন:</span>
+                </span>
+                <span class="font-bold text-slate-800">বাংলা ও ইংরেজি মাধ্যম</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="flex items-center gap-2 text-slate-500">
+                  <i data-lucide="monitor" class="w-4 h-4 text-slate-400"></i>
+                  <span>ডিজিটাল সাপোর্ট:</span>
+                </span>
+                <span class="font-bold text-slate-800">শিক্ষার্থী ও অভিভাবক পোর্টাল</span>
+              </li>
+            </ul>
+
+            <!-- Big Enroll Now CTA Button -->
+            <div class="space-y-2">
+              <button id="enroll-cta-btn" onclick="proceedToEnroll()" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-red to-rose-600 hover:from-brand-redHover hover:to-rose-700 text-white font-extrabold text-base py-4 px-6 rounded-2xl shadow-lg shadow-brand-red/25 transition-all hover:scale-[1.02]">
+                <span id="enroll-btn-text">ভর্তি আবেদন সম্পন্ন করুন</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <!-- Office Payment Reassurance Notice -->
+            <div class="p-4 bg-amber-50/70 border border-amber-200/80 rounded-2xl text-xs text-slate-700 space-y-2">
+              <div class="flex items-center gap-1.5 font-bold text-amber-900">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                <span>পেমেন্ট সম্পর্কিত তথ্য:</span>
+              </div>
+              <p class="leading-relaxed text-slate-600">
+                অনলাইনে কোনো ফি পরিশোধ করতে হবে না। ফরম পূরণ করে সরাসরি অফিসে এসে অথবা ক্লাস শুরুর দিন ফি পরিশোধ করতে পারবেন।
+              </p>
+              <div class="pt-1.5 border-t border-amber-200/60 font-medium text-[11px] text-amber-950">
+                📍 <strong>প্রধান কার্যালয়:</strong> ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা।<br>
+                📞 <strong>যোগাযোগ:</strong> 01992-312710
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+
+
+  <!-- Deep Purple Footer -->
+  <footer class="bg-brand-purple text-slate-300 border-t border-purple-900/60 pt-12 pb-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-purple-800/60 text-center sm:text-left">
+        <div>
+          <span class="text-xl font-black text-white font-en">SCIENTICA Academic Care</span>
+          <p class="text-xs text-purple-200/80 mt-1">প্রধান কার্যালয়: ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:01992312710" class="text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full font-en transition-colors">
+            01992-312710
+          </a>
+          <a href="enroll.html" class="text-sm font-bold bg-brand-red hover:bg-brand-redHover text-white px-5 py-2 rounded-full transition-colors">
+            ভর্তি ফরম
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-xs text-purple-300/60">
+        <p>© 2026 SCIENTICA Academic Care । সর্বস্বত্ব সংরক্ষিত ।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    let currentClass = 10;
+    let currentMode = 'full';
+    let selectedSubjects = ['পদার্থবিজ্ঞান', 'রসায়ন', 'গণিত', 'উচ্চতর গণিত', 'জীববিজ্ঞান', 'তথ্য ও যোগাযোগ প্রযুক্তি'];
+    const allSubjects = ['পদার্থবিজ্ঞান', 'রসায়ন', 'গণিত', 'উচ্চতর গণিত', 'জীববিজ্ঞান', 'তথ্য ও যোগাযোগ প্রযুক্তি'];
+
+    function initPage() {
+      const params = getQueryParams();
+      if (params.class === '9') {
+        currentClass = 9;
+      } else {
+        currentClass = 10;
+      }
+      updateClassUI();
+
+      if (params.package === 'trial') {
+        currentMode = 'trial';
+        const trialRadio = document.querySelector('input[name="enrollment_mode"][value="trial"]');
+        if (trialRadio) trialRadio.checked = true;
+        onModeChange('trial');
+      } else if (params.package === 'custom') {
+        currentMode = 'custom';
+        const customRadio = document.querySelector('input[name="enrollment_mode"][value="custom"]');
+        if (customRadio) customRadio.checked = true;
+        onModeChange('custom');
+      } else {
+        currentMode = 'full';
+        const fullRadio = document.querySelector('input[name="enrollment_mode"][value="full"]');
+        if (fullRadio) fullRadio.checked = true;
+        onModeChange('full');
+      }
+    }
+
+    function switchClass(classNum) {
+      currentClass = classNum;
+      updateClassUI();
+    }
+
+    function updateClassUI() {
+      const btn9 = document.getElementById('switch-class-9');
+      const btn10 = document.getElementById('switch-class-10');
+      const breadcrumb = document.getElementById('breadcrumb-class');
+      const mainTitle = document.getElementById('program-main-title');
+      const bannerHeading = document.getElementById('banner-course-heading');
+      const nav9 = document.getElementById('nav-class-9');
+      const nav10 = document.getElementById('nav-class-10');
+
+      if (currentClass === 9) {
+        btn9.className = 'px-4 py-1.5 rounded-xl text-sm font-bold transition-all bg-white text-brand-teal shadow-sm';
+        btn10.className = 'px-4 py-1.5 rounded-xl text-sm font-bold transition-all text-slate-600 hover:text-slate-900';
+        breadcrumb.innerText = '৯ম শ্রেণি একাডেমিক প্রোগ্রাম';
+        mainTitle.innerText = '৯ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭';
+        bannerHeading.innerText = '৯ম শ্রেণি একাডেমিক ফুল কোর্স ২০২৭';
+        nav9.classList.add('text-brand-teal', 'font-bold');
+        nav10.classList.remove('text-brand-teal', 'font-bold');
+      } else {
+        btn10.className = 'px-4 py-1.5 rounded-xl text-sm font-bold transition-all bg-white text-brand-teal shadow-sm';
+        btn9.className = 'px-4 py-1.5 rounded-xl text-sm font-bold transition-all text-slate-600 hover:text-slate-900';
+        breadcrumb.innerText = '১০ম শ্রেণি একাডেমিক প্রোগ্রাম';
+        mainTitle.innerText = '১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭';
+        bannerHeading.innerText = '১০ম শ্রেণি একাডেমিক ফুল কোর্স ২০২৭';
+        nav10.classList.add('text-brand-teal', 'font-bold');
+        nav9.classList.remove('text-brand-teal', 'font-bold');
+      }
+    }
+
+    function onModeChange(mode) {
+      currentMode = mode;
+      const checkboxes = document.querySelectorAll('input[name="subject_item"]');
+      const hint = document.getElementById('subject-mode-hint');
+      const priceDisplay = document.getElementById('card-price-display');
+      const originalPrice = document.getElementById('card-original-price');
+      const saveBadge = document.getElementById('card-save-badge');
+      const subtitle = document.getElementById('card-pricing-subtitle');
+      const btnText = document.getElementById('enroll-btn-text');
+
+      if (mode === 'trial') {
+        checkboxes.forEach(cb => {
+          cb.checked = true;
+          cb.disabled = true;
+        });
+        selectedSubjects = [...allSubjects];
+        hint.innerText = 'ফ্রী ট্রায়ালে সকল বিষয়ের ক্লাস যাচাই করার সুযোগ';
+        priceDisplay.innerText = '৳0';
+        originalPrice.classList.add('hidden');
+        saveBadge.innerText = 'ফ্রী ক্লাস ট্রায়াল';
+        saveBadge.className = 'bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-200';
+        subtitle.innerText = 'কোনো ফি পরিশোধ করতে হবে না';
+        btnText.innerText = 'ফ্রী ট্রায়াল নিশ্চিত করুন';
+      } else if (mode === 'full') {
+        checkboxes.forEach(cb => {
+          cb.checked = true;
+          cb.disabled = true;
+        });
+        selectedSubjects = [...allSubjects];
+        hint.innerText = 'ফুল কম্বো কোর্সে সকল ৬টি বিষয় অন্তর্ভুক্ত';
+        priceDisplay.innerText = '৳5,000';
+        originalPrice.innerText = '৳6,000';
+        originalPrice.classList.remove('hidden');
+        saveBadge.innerText = 'সেভ ৳1,000';
+        saveBadge.className = 'bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-200';
+        subtitle.innerText = 'ফুল কম্বো কোর্স (সকল ৬টি বিষয় অন্তর্ভুক্ত)';
+        btnText.innerText = 'ভর্তি আবেদন সম্পন্ন করুন';
+      } else if (mode === 'custom') {
+        checkboxes.forEach(cb => {
+          cb.disabled = false;
+        });
+        hint.innerText = 'পছন্দমতো যেকোনো বিষয় সিলেক্ট বা আনসিলেক্ট করুন';
+        updateSubjectSelection();
+      }
+
+      renderSubjectChips();
+    }
+
+    function updateSubjectSelection() {
+      if (currentMode !== 'custom') return;
+
+      const checkboxes = document.querySelectorAll('input[name="subject_item"]:checked');
+      selectedSubjects = Array.from(checkboxes).map(cb => cb.value);
+
+      const count = selectedSubjects.length;
+      const totalFee = count * 1000;
+
+      const priceDisplay = document.getElementById('card-price-display');
+      const originalPrice = document.getElementById('card-original-price');
+      const saveBadge = document.getElementById('card-save-badge');
+      const subtitle = document.getElementById('card-pricing-subtitle');
+      const btnText = document.getElementById('enroll-btn-text');
+
+      priceDisplay.innerText = '৳' + totalFee.toLocaleString('en-US');
+      originalPrice.classList.add('hidden');
+      saveBadge.innerText = `${count}টি বিষয়`;
+      saveBadge.className = 'bg-slate-100 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-full border border-slate-200';
+      subtitle.innerText = `প্রতি বিষয় ৳১,০০০ (মোট ${count}টি বিষয়)`;
+      btnText.innerText = count > 0 ? 'ভর্তি আবেদন সম্পন্ন করুন' : 'বিষয় নির্বাচন করুন';
+
+      renderSubjectChips();
+    }
+
+    function renderSubjectChips() {
+      const countBadge = document.getElementById('subject-count-badge');
+      const selectedBadgeCount = document.getElementById('selected-badge-count');
+      const chipsBox = document.getElementById('selected-chips-box');
+
+      countBadge.innerText = selectedSubjects.length;
+      selectedBadgeCount.innerText = `${selectedSubjects.length} টি`;
+
+      if (selectedSubjects.length === 0) {
+        chipsBox.innerHTML = '<span class="text-xs text-rose-500 font-bold">কোনো বিষয় নির্বাচিত নেই!</span>';
+        return;
+      }
+
+      chipsBox.innerHTML = selectedSubjects.map(sub => `
+        <span class="text-[11px] bg-white border border-slate-200 px-2 py-0.5 rounded-md text-slate-700 font-medium">
+          ${sub}
+        </span>
+      `).join('');
+    }
+
+    function proceedToEnroll() {
+      if (currentMode === 'custom' && selectedSubjects.length === 0) {
+        alert('অনুগ্রহ করে অন্তত একটি বিষয় নির্বাচন করুন!');
+        return;
+      }
+
+      let fee = 5000;
+      if (currentMode === 'trial') fee = 0;
+      if (currentMode === 'custom') fee = selectedSubjects.length * 1000;
+
+      const params = new URLSearchParams({
+        class: currentClass,
+        package: currentMode,
+        subjects: selectedSubjects.join(','),
+        fee: fee
+      });
+
+      window.location.href = `enroll.html?${params.toString()}`;
+    }
+
+    function toggleDescription() {
+      const moreSection = document.getElementById('course-desc-more');
+      const toggleBtn = document.getElementById('desc-toggle-btn');
+      if (moreSection.classList.contains('hidden')) {
+        moreSection.classList.remove('hidden');
+        toggleBtn.innerHTML = '<span>কম দেখুন (Show less)</span><i data-lucide="chevron-up" class="w-4 h-4"></i>';
+      } else {
+        moreSection.classList.add('hidden');
+        toggleBtn.innerHTML = '<span>আরও দেখুন (Show more)</span><i data-lucide="chevron-down" class="w-4 h-4"></i>';
+      }
+      lucide.createIcons();
+    }
+
+    function openPosterModal() {
+      document.getElementById('poster-modal').classList.remove('hidden');
+    }
+    function closePosterModal() {
+      document.getElementById('poster-modal').classList.add('hidden');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initPage();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

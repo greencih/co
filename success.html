@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভর্তি আবেদন সফল | SCIENTICA Academic Care</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#00897b',
+              tealDark: '#00695c',
+              tealLight: '#e0f2f1',
+              red: '#e53935',
+              navy: '#12122b',
+              purple: '#2d1133'
+            }
+          },
+          fontFamily: {
+            bangla: ['Hind Siliguri', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Hind Siliguri', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-bangla flex flex-col min-h-screen">
+
+  <!-- Simple Header -->
+  <header class="bg-white border-b border-slate-200 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-900 to-brand-teal flex items-center justify-center text-white shadow-md border border-brand-teal/30">
+          <i data-lucide="atom" class="w-6 h-6 text-emerald-300"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black text-slate-900 tracking-tight font-en">
+            SCIENTICA <span class="text-brand-teal font-bold text-sm">Academic Care</span>
+          </span>
+          <p class="text-[10px] text-slate-500">খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত</p>
+        </div>
+      </a>
+      <a href="tel:01992312710" class="text-xs sm:text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-3.5 py-1.5 rounded-full border border-slate-200 font-en transition-colors">
+        01992-312710
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Success Receipt Area -->
+  <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <div class="max-w-2xl w-full bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-8">
+      
+      <!-- Checkmark Icon & Congratulatory Heading -->
+      <div class="text-center space-y-3">
+        <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
+          <i data-lucide="check-circle-2" class="w-12 h-12 stroke-[2.5]"></i>
+        </div>
+        
+        <span class="inline-block bg-emerald-50 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200">
+          আবেদন সফলভাবে গৃহীত হয়েছে
+        </span>
+
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          অভিনন্দন! আপনার ভর্তি আবেদন সম্পন্ন হয়েছে
+        </h1>
+        
+        <p class="text-slate-600 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+          আপনার আবেদনটি <strong>SCIENTICA Academic Care</strong> এ সফলভাবে সংরক্ষিত হয়েছে।
+        </p>
+      </div>
+
+      <!-- Application Tracking Box -->
+      <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-semibold text-slate-400 block">আবেদন আইডি (Application ID):</span>
+          <span id="application-id" class="text-lg font-black text-brand-teal font-en tracking-wider">
+            SCI-2027-84921
+          </span>
+        </div>
+        <div class="text-xs text-slate-500 text-center sm:text-right">
+          শুরুর তারিখ: <strong class="text-brand-red text-sm">১০ জানুয়ারি, ২০২৭</strong>
+        </div>
+      </div>
+
+      <!-- Next Steps & Office Payment Instruction -->
+      <div class="space-y-4">
+        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="list-checks" class="w-5 h-5 text-brand-teal"></i>
+          <span>পরবর্তী করণীয় নির্দেশিকা (Next Steps):</span>
+        </h3>
+
+        <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+          
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-amber-50/70 border border-amber-200/80">
+            <div class="w-6 h-6 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+              ১
+            </div>
+            <div>
+              <strong class="text-amber-950 block mb-0.5">অফিসে যোগাযোগ ও ফি পরিশোধ:</strong>
+              <p class="text-slate-600 leading-relaxed">
+                অনলাইনে কোনো ফি নেওয়া হয়নি। ক্লাস শুরুর পূর্বে অথবা প্রথম ক্লাসের দিন সরাসরি আমাদের অফিসে এসে আবেদন আইডি দেখিয়ে ফি পরিশোধ করুন ও পোর্টাল আইডি সংগ্রহ করুন।
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="w-6 h-6 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+              ২
+            </div>
+            <div>
+              <strong class="text-slate-900 block mb-0.5">শিক্ষার্থী ও অভিভাবক অনলাইন পোর্টাল:</strong>
+              <p class="text-slate-600 leading-relaxed">
+                আপনার দেওয়া মোবাইল নম্বরে পোর্টাল লগইন ও ক্লাসের বিস্তারিত সময়সূচি এসএমএস এর মাধ্যমে পাঠানো হবে।
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="w-6 h-6 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+              ৩
+            </div>
+            <div>
+              <strong class="text-slate-900 block mb-0.5">ক্লাস শুরু:</strong>
+              <p class="text-slate-600 leading-relaxed">
+                ১০ জানুয়ারি ২০২৭ তারিখ থেকে সরাসরি শাখায় নির্ধারিত ব্যাচ ডে অনুযায়ী ওরিয়েন্টেশন ও ক্লাস শুরু হবে।
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Office Contact Information -->
+      <div class="p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100 text-xs sm:text-sm text-indigo-950 space-y-2">
+        <div class="font-bold text-indigo-900 flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-4 h-4 text-indigo-600"></i>
+          <span>আমাদের প্রধান কার্যালয়:</span>
+        </div>
+        <p class="leading-relaxed">
+          ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা
+        </p>
+        <div class="pt-1 flex flex-wrap items-center gap-4 text-xs font-semibold text-indigo-800">
+          <span>ফোন: <span class="font-en">01992-312710</span></span>
+          <span>অফিস সময়: সকাল ৯:০০ - রাত ৮:০০</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <button onclick="window.print()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm py-3 px-5 rounded-xl border border-slate-200 transition-colors">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>রশিদ প্রিন্ট করুন</span>
+        </button>
+        
+        <a href="index.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-teal hover:bg-brand-tealDark text-white font-bold text-xs sm:text-sm py-3 px-6 rounded-xl shadow-md shadow-brand-teal/20 transition-all hover:scale-[1.01]">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>হোমপেজে ফিরে যান</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-purple text-purple-200/70 text-center py-6 text-xs">
+    <p>© 2026 SCIENTICA Academic Care । প্রধান কার্যালয়: বয়রা, খুলনা | হেল্পলাইন: 01992-312710</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    function setupReceipt() {
+      const randomNum = Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('application-id').innerText = `SCI-2027-${randomNum}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setupReceipt();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

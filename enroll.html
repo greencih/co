@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভর্তি আবেদন ও রেজিস্ট্রেশন | SCIENTICA Academic Care</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#00897b',
+              tealDark: '#00695c',
+              tealLight: '#e0f2f1',
+              red: '#e53935',
+              redHover: '#d32f2f',
+              navy: '#12122b',
+              purple: '#2d1133',
+              gold: '#ffb300'
+            }
+          },
+          fontFamily: {
+            bangla: ['Hind Siliguri', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Hind Siliguri', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-bangla flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span>🏛️ প্রধান কার্যালয়: ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা | হেল্পলাইন: <strong class="font-en text-amber-300">01992-312710</strong></span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-slate-900 to-brand-teal flex items-center justify-center text-white shadow-md shadow-brand-teal/20 border border-brand-teal/30">
+            <i data-lucide="atom" class="w-6 h-6 text-emerald-300"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none group-hover:text-brand-teal transition-colors font-en">
+              SCIENTICA <span class="text-brand-teal font-bold text-sm sm:text-base">Academic Care</span>
+            </span>
+            <span class="text-[10px] sm:text-[11px] text-slate-500 font-medium tracking-wide mt-1">
+              খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+          <a href="index.html" class="hover:text-brand-teal transition-colors">হোম</a>
+          <a href="program-detail.html?class=9" class="hover:text-brand-teal transition-colors">৯ম শ্রেণি</a>
+          <a href="program-detail.html?class=10" class="hover:text-brand-teal transition-colors">১০ম শ্রেণি</a>
+          <a href="enroll.html?package=trial&fee=0" class="text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1 font-bold border border-emerald-200">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>ফ্রী ক্লাস ট্রায়াল</span>
+          </a>
+        </nav>
+
+        <!-- Right Quick Contact -->
+        <div class="flex items-center gap-3">
+          <a href="tel:01992312710" class="flex items-center gap-2 text-slate-700 font-bold text-xs sm:text-sm bg-slate-100 px-3.5 py-2 rounded-full border border-slate-200 font-en">
+            <i data-lucide="phone" class="w-4 h-4 text-brand-teal"></i>
+            <span>01992-312710</span>
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-2">
+      <a href="index.html" class="block py-1.5 text-slate-700 font-medium">হোম</a>
+      <a href="program-detail.html?class=9" class="block py-1.5 text-slate-700 font-medium">৯ম শ্রেণি একাডেমিক</a>
+      <a href="program-detail.html?class=10" class="block py-1.5 text-slate-700 font-medium">১০ম শ্রেণি একাডেমিক</a>
+      <a href="enroll.html?package=trial&fee=0" class="block py-1.5 text-emerald-600 font-bold">ফ্রী ক্লাস ট্রায়াল</a>
+      <a href="tel:01992312710" class="block py-1.5 text-slate-700 font-bold font-en">01992-312710</a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow py-8 md:py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Title -->
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full mb-2">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+          SCIENTICA অনলাইন এডমিশন পোর্টাল
+        </span>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+          একাডেমিক ভর্তি ও ফ্রী ট্রায়াল আবেদন
+        </h1>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1.5">
+          “A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা” — সেশন ২০২৭
+        </p>
+      </div>
+
+      <!-- Office Payment Information Notice -->
+      <div class="mb-8 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/90 rounded-3xl p-6 sm:p-7 shadow-sm">
+        <div class="flex flex-col sm:flex-row items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
+            <i data-lucide="info" class="w-6 h-6"></i>
+          </div>
+          <div class="space-y-1.5 flex-grow">
+            <h2 class="text-base sm:text-lg font-black text-amber-950">
+              পেমেন্ট সংক্রান্ত জরুরি নির্দেশিকা (Payment Notice)
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              অনলাইনে কোনো ফি পরিশোধ করতে হবে না। ফরমটি সফলভাবে সাবমিট করার পর আপনার আবেদনটি নথিভুক্ত হবে। আপনি সরাসরি আমাদের কার্যালয়ে এসে অথবা ক্লাস শুরুর দিন অফিসে ফি পরিশোধ করতে পারবেন।
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-amber-900">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                <strong>প্রধান কার্যালয়:</strong> ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা
+              </span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                <strong>হেল্পলাইন:</strong> 01992-312710
+              </span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                <strong>ক্লাস শুরু:</strong> ১০ জানুয়ারি, ২০২৭
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Netlify Form Starts -->
+      <form name="student-enrollment" 
+            method="POST" 
+            data-netlify="true" 
+            netlify-honeypot="bot-field" 
+            action="success.html" 
+            id="enrollment-form" 
+            class="space-y-8">
+        
+        <!-- Netlify Required Hidden Form-Name & Honeypot -->
+        <input type="hidden" name="form-name" value="student-enrollment" />
+        <p class="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <!-- Hidden attributes populated dynamically from query parameters -->
+        <input type="hidden" name="class_level" id="hidden_class_level" value="10" />
+        <input type="hidden" name="package_type" id="hidden_package_type" value="full" />
+        <input type="hidden" name="enrolled_subjects" id="hidden_enrolled_subjects" value="পদার্থবিজ্ঞান, রসায়ন, গণিত, উচ্চতর গণিত, জীববিজ্ঞান, তথ্য ও যোগাযোগ প্রযুক্তি" />
+        <input type="hidden" name="total_payable_fee" id="hidden_total_payable_fee" value="5000" />
+        <input type="hidden" name="office_location" value="১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা" />
+
+        <!-- 1. Dynamic Course & Subject Summary Box -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <span class="text-xs font-bold text-brand-teal uppercase tracking-wider">নির্বাচিত কোর্স সামারি</span>
+              <h2 id="summary-program-title" class="text-xl sm:text-2xl font-black text-slate-900 mt-0.5">
+                ১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭
+              </h2>
+            </div>
+            <a href="program-detail.html" id="edit-program-link" class="text-xs font-bold text-brand-teal hover:underline flex items-center gap-1">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+              <span>পরিবর্তন করুন</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+            
+            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <span class="text-slate-400 block mb-1">শ্রেণি:</span>
+              <span id="summary-class-batch" class="font-bold text-slate-800 text-sm sm:text-base">
+                ১০ম শ্রেণি একাডেমিক
+              </span>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+              <span class="text-slate-400 block mb-1">ভর্তি ধরন:</span>
+              <span id="summary-package-badge" class="font-bold text-brand-teal text-sm sm:text-base">
+                ফুল কম্বো কোর্স
+              </span>
+            </div>
+
+            <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
+              <span class="text-emerald-700 block mb-1">কোর্স ফি (অফিসে প্রদেয়):</span>
+              <span id="summary-total-fee" class="font-black text-emerald-800 text-lg sm:text-xl font-en">
+                ৳5,000
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Selected Subjects Chips -->
+          <div>
+            <span class="text-xs font-bold text-slate-500 block mb-2">অন্তর্ভুক্ত বিষয়সমূহ:</span>
+            <div id="summary-subjects-chips" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated chips -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Academic Preferences (Version & Batch Schedule) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 pb-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center font-bold">
+              ১
+            </div>
+            <div>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900">ভার্সন ও ব্যাচ সময়সূচি নির্বাচন</h3>
+              <p class="text-xs text-slate-500">আপনার সুবিধাজনক মাধ্যম ও ক্লাসের দিন বেছে নিন</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+            <!-- Medium / Version Selection -->
+            <div class="space-y-1.5">
+              <label for="version_medium" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                শিক্ষার মাধ্যম (ভার্সন) <span class="text-rose-500">*</span>
+              </label>
+              <select id="version_medium" name="version_medium" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all bg-white font-medium">
+                <option value="বাংলা ভার্সন" selected>বাংলা ভার্সন (Bangla Medium)</option>
+                <option value="ইংরেজি ভার্সন">ইংরেজি ভার্সন (English Version)</option>
+              </select>
+            </div>
+
+            <!-- Batch Day Preference -->
+            <div class="space-y-1.5">
+              <label for="batch_schedule" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                পছন্দের ব্যাচ ডে <span class="text-rose-500">*</span>
+              </label>
+              <select id="batch_schedule" name="batch_schedule" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all bg-white font-medium">
+                <option value="শনি-সোম-বুধ" selected>শনি - সোম - বুধ</option>
+                <option value="রবি-মঙ্গল-বৃহস্পতি">রবি - মঙ্গল - বৃহস্পতি</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. Student Personal Information -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 pb-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center font-bold">
+              ২
+            </div>
+            <div>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900">শিক্ষার্থীর ব্যক্তিগত তথ্য</h3>
+              <p class="text-xs text-slate-500">অনলাইন পোর্টাল আইডি তৈরির জন্য নির্ভুল তথ্য দিন</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+            <!-- Student Name Bangla -->
+            <div class="space-y-1.5">
+              <label for="student_name_bn" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                শিক্ষার্থীর নাম (বাংলায়) <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="student_name_bn" name="student_name_bn" required placeholder="উদা: তাসনিম আহমেদ" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all">
+            </div>
+
+            <!-- Student Name English -->
+            <div class="space-y-1.5">
+              <label for="student_name_en" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                Student Full Name (English) <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="student_name_en" name="student_name_en" required placeholder="e.g. Tasnim Ahmed" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all font-en">
+            </div>
+
+            <!-- School / Institute Name -->
+            <div class="space-y-1.5">
+              <label for="school_name" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                বিদ্যালয় / স্কুলের নাম <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="school_name" name="school_name" required placeholder="উদা: খুলনা জেলা স্কুল" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all">
+            </div>
+
+            <!-- Roll & Gender in 2 columns -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="space-y-1.5">
+                <label for="school_roll" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                  ক্লাস রোল নম্বর
+                </label>
+                <input type="text" id="school_roll" name="school_roll" placeholder="উদা: ১২" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all">
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="gender" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                  লিঙ্গ <span class="text-rose-500">*</span>
+                </label>
+                <select id="gender" name="gender" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all bg-white">
+                  <option value="ছাত্র">ছাত্র</option>
+                  <option value="ছাত্রী">ছাত্রী</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4. Guardian & Contact Information -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 pb-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center font-bold">
+              ৩
+            </div>
+            <div>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900">যোগাযোগ ও অভিভাবক পোর্টাল তথ্য</h3>
+              <p class="text-xs text-slate-500">এসএমএস ফলাফল ও অভিভাবক পোর্টাল লগইনের জন্য</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+            <!-- Student Mobile -->
+            <div class="space-y-1.5">
+              <label for="student_phone" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                শিক্ষার্থীর মোবাইল নম্বর <span class="text-rose-500">*</span>
+              </label>
+              <input type="tel" id="student_phone" name="student_phone" required pattern="[0-9]{11}" placeholder="017XXXXXXXX (১১ ডিজিট)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all font-en">
+            </div>
+
+            <!-- Guardian Mobile -->
+            <div class="space-y-1.5">
+              <label for="guardian_phone" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                অভিভাবকের মোবাইল নম্বর <span class="text-rose-500">*</span>
+              </label>
+              <input type="tel" id="guardian_phone" name="guardian_phone" required pattern="[0-9]{11}" placeholder="018XXXXXXXX (১১ ডিজিট)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all font-en">
+            </div>
+
+            <!-- Guardian Name -->
+            <div class="space-y-1.5">
+              <label for="guardian_name" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                অভিভাবকের নাম <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="guardian_name" name="guardian_name" required placeholder="উদা: মো. রফিকুল ইসলাম" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all">
+            </div>
+
+            <!-- Residential Address -->
+            <div class="space-y-1.5">
+              <label for="student_address" class="text-xs sm:text-sm font-bold text-slate-700 block">
+                বর্তমান ঠিকানা / এলাকা <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="student_address" name="student_address" required placeholder="উদা: বয়রা, খুলনা" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 text-sm outline-none transition-all">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. Confirmation & Submission -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="terms_agree" required class="w-5 h-5 text-brand-teal rounded border-slate-300 focus:ring-brand-teal mt-0.5">
+            <label for="terms_agree" class="text-xs sm:text-sm text-slate-700 leading-relaxed cursor-pointer">
+              আমি নিশ্চয়তা দিচ্ছি যে ফরমের সকল তথ্য সত্য এবং নির্ভুল। আমি অবগত যে অনলাইনে কোনো ফি দিতে হচ্ছে না এবং ক্লাসের পূর্বে সরাসরি SCIENTICA Academic Care অফিসে (১৩, জলিল স্মরণী, বয়রা, খুলনা) গিয়ে ভর্তি ও ফি পরিশোধ সম্পন্ন করব।
+            </label>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-xs text-slate-500 text-center sm:text-left">
+              🔒 আপনার সকল ব্যক্তিগত তথ্য সুরক্ষিত থাকবে
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-red to-rose-600 hover:from-brand-redHover hover:to-rose-700 text-white font-extrabold text-base py-4 px-10 rounded-2xl shadow-xl shadow-brand-red/25 transition-all hover:scale-[1.02] cursor-pointer">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>ভর্তি আবেদন সম্পন্ন করুন</span>
+            </button>
+          </div>
+        </div>
+
+      </form>
+      <!-- Netlify Form Ends -->
+
+    </div>
+  </main>
+
+  <!-- Deep Purple Footer -->
+  <footer class="bg-brand-purple text-slate-300 border-t border-purple-900/60 pt-12 pb-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-purple-800/60 text-center sm:text-left">
+        <div>
+          <span class="text-xl font-black text-white font-en">SCIENTICA Academic Care</span>
+          <p class="text-xs text-purple-200/80 mt-1">প্রধান কার্যালয়: ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা | ফোন: 01992-312710</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:01992312710" class="text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full font-en transition-colors">
+            01992-312710
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-xs text-purple-300/60">
+        <p>© 2026 SCIENTICA Academic Care । সর্বস্বত্ব সংরক্ষিত ।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    function populateEnrollmentData() {
+      const params = getQueryParams();
+
+      const classLevel = params.class || '10';
+      const packageType = params.package || 'full';
+      const fee = params.fee !== undefined ? params.fee : (packageType === 'trial' ? '0' : '5000');
+      
+      let subjectsStr = params.subjects || '';
+      let subjectsArray = [];
+
+      if (!subjectsStr || subjectsStr === 'All') {
+        subjectsArray = ['পদার্থবিজ্ঞান', 'রসায়ন', 'গণিত', 'উচ্চতর গণিত', 'জীববিজ্ঞান', 'তথ্য ও যোগাযোগ প্রযুক্তি'];
+      } else {
+        subjectsArray = subjectsStr.split(',').map(s => s.trim()).filter(Boolean);
+      }
+
+      // Update Hidden Form Inputs
+      document.getElementById('hidden_class_level').value = classLevel;
+      document.getElementById('hidden_package_type').value = packageType;
+      document.getElementById('hidden_enrolled_subjects').value = subjectsArray.join(', ');
+      document.getElementById('hidden_total_payable_fee').value = fee;
+
+      // Update UI Elements
+      const titleElem = document.getElementById('summary-program-title');
+      const classBatchElem = document.getElementById('summary-class-batch');
+      const packageBadgeElem = document.getElementById('summary-package-badge');
+      const feeElem = document.getElementById('summary-total-fee');
+      const chipsContainer = document.getElementById('summary-subjects-chips');
+      const editLink = document.getElementById('edit-program-link');
+
+      editLink.href = `program-detail.html?class=${classLevel}&package=${packageType}`;
+
+      if (classLevel === '9') {
+        titleElem.innerText = '৯ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭';
+        classBatchElem.innerText = '৯ম শ্রেণি একাডেমিক';
+      } else {
+        titleElem.innerText = '১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭';
+        classBatchElem.innerText = '১০ম শ্রেণি একাডেমিক';
+      }
+
+      if (packageType === 'trial') {
+        packageBadgeElem.innerText = 'ফ্রী ক্লাস করে ভর্তি';
+        packageBadgeElem.className = 'font-bold text-emerald-700 text-sm sm:text-base';
+        feeElem.innerText = '৳0 (ফ্রী ট্রায়াল)';
+      } else if (packageType === 'custom') {
+        packageBadgeElem.innerText = `বিষয়ভিত্তিক ভর্তি (${subjectsArray.length}টি বিষয়)`;
+        packageBadgeElem.className = 'font-bold text-rose-700 text-sm sm:text-base';
+        feeElem.innerText = `৳${parseInt(fee).toLocaleString('en-US')}`;
+      } else {
+        packageBadgeElem.innerText = 'ফুল কম্বো কোর্স (সকল ৬টি বিষয়)';
+        packageBadgeElem.className = 'font-bold text-brand-teal text-sm sm:text-base';
+        feeElem.innerText = '৳5,000';
+      }
+
+      chipsContainer.innerHTML = subjectsArray.map(sub => `
+        <span class="inline-flex items-center gap-1 text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200 px-3 py-1 rounded-lg">
+          <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>${sub}</span>
+        </span>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      populateEnrollmentData();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

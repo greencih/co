@@ -1,0 +1,70 @@
+/* Custom Global Styles & Bengali Typography */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-bangla: 'Hind Siliguri', sans-serif;
+  --font-english: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-bangla);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+.font-en {
+  font-family: var(--font-english);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Pulse animation for notice */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom radio and checkbox styles */
+.custom-checkbox input:checked + label {
+  border-color: #00897b;
+  background-color: #f0fdfa;
+}
+
+.custom-checkbox input:checked + label .check-icon {
+  background-color: #00897b;
+  color: #ffffff;
+  border-color: #00897b;
+}
+
+/* Sticky top sidebar offset */
+.sticky-sidebar {
+  top: 96px;
+}

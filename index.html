@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCIENTICA Academic Care | ৯ম ও ১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#00897b',
+              tealDark: '#00695c',
+              tealLight: '#e0f2f1',
+              red: '#e53935',
+              redHover: '#d32f2f',
+              navy: '#12122b',
+              navyDark: '#0a0a1a',
+              purple: '#2d1133',
+              purpleDark: '#1e0922',
+              gold: '#ffb300'
+            }
+          },
+          fontFamily: {
+            bangla: ['Hind Siliguri', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Hind Siliguri', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-bangla flex flex-col min-h-screen">
+
+  <!-- 1. Top Identity Banner (Khulna University Lead) -->
+  <section class="bg-gradient-to-r from-brand-navyDark via-brand-navy to-slate-900 text-white py-6 px-4 border-b border-slate-800 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+      
+      <!-- Highlight Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold text-amber-300 tracking-wider mb-2">
+        <i data-lucide="graduation-cap" class="w-4 h-4 text-amber-400"></i>
+        <span>খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত</span>
+      </div>
+      
+      <!-- Core Slogan from Poster -->
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight my-1">
+        A+ পাওয়া নয়, লক্ষ্য <span class="text-amber-400 underline decoration-amber-500/60 decoration-wavy decoration-2">বোর্ড স্ট্যান্ড করা</span>
+      </h2>
+      
+      <div class="flex flex-wrap items-center justify-center gap-3 my-2 text-sm sm:text-base font-semibold text-slate-200">
+        <span class="bg-brand-red text-white font-extrabold px-3 py-0.5 rounded-full shadow-sm">
+          বাংলা / ইংরেজি ভার্সন
+        </span>
+        <span>•</span>
+        <span>৯ম ও ১০ম একাডেমিক প্রোগ্রাম ২০২৭</span>
+        <span>•</span>
+        <span class="text-amber-300 font-bold">শুরু: ১০ জানুয়ারি, ২০২৭</span>
+      </div>
+      
+      <p class="text-slate-300 text-xs sm:text-sm max-w-2xl font-normal mt-1">
+        বিজ্ঞান বিভাগের প্রতিটি বিষয়ের শতভাগ কনসেপ্ট স্পষ্টকরণ ও প্রতিটি অধ্যায়ের গভীর প্রস্তুতি
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-slate-900 to-brand-teal flex items-center justify-center text-white shadow-md shadow-brand-teal/20 group-hover:scale-105 transition-transform border border-brand-teal/30">
+            <i data-lucide="atom" class="w-7 h-7 text-emerald-300"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-none group-hover:text-brand-teal transition-colors font-en">
+              SCIENTICA <span class="text-brand-teal font-bold text-base sm:text-lg">Academic Care</span>
+            </span>
+            <span class="text-[10px] sm:text-[11px] text-slate-500 font-medium tracking-wide mt-1">
+              খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="text-base font-semibold text-brand-teal border-b-2 border-brand-teal py-1">হোম</a>
+          <a href="program-detail.html?class=9" class="text-base font-medium text-slate-600 hover:text-brand-teal transition-colors">৯ম শ্রেণি</a>
+          <a href="program-detail.html?class=10" class="text-base font-medium text-slate-600 hover:text-brand-teal transition-colors">১০ম শ্রেণি</a>
+          <a href="enroll.html?package=trial&fee=0" class="text-base font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-1 rounded-full transition-colors flex items-center gap-1.5 border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            ফ্রী ক্লাস করে ভর্তি
+          </a>
+          <a href="#services" class="text-base font-medium text-slate-600 hover:text-brand-teal transition-colors">সুবিধাসমূহ</a>
+          <a href="#office" class="text-base font-medium text-slate-600 hover:text-brand-teal transition-colors">কার্যালয়</a>
+        </nav>
+
+        <!-- CTA & Helpline -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:01992312710" class="flex items-center gap-2 text-slate-700 hover:text-brand-teal font-bold text-sm bg-slate-100 hover:bg-slate-200/80 px-3.5 py-2 rounded-full transition-colors border border-slate-200">
+            <i data-lucide="phone-call" class="w-4 h-4 text-brand-teal"></i>
+            <span class="font-en">01992-312710</span>
+          </a>
+          <a href="enroll.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-red to-rose-600 hover:from-brand-redHover hover:to-rose-700 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md shadow-brand-red/25 hover:shadow-lg transition-all hover:scale-[1.02]">
+            <span>ভর্তি আবেদন</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <div class="flex sm:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 shadow-xl">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="font-semibold text-brand-teal py-2 border-b border-slate-100">হোম</a>
+        <a href="program-detail.html?class=9" class="font-medium text-slate-700 py-2 border-b border-slate-100">৯ম শ্রেণি একাডেমিক</a>
+        <a href="program-detail.html?class=10" class="font-medium text-slate-700 py-2 border-b border-slate-100">১০ম শ্রেণি একাডেমিক</a>
+        <a href="enroll.html?package=trial&fee=0" class="font-semibold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg">🎁 ফ্রী ক্লাস করে ভর্তি হওয়ার সুযোগ</a>
+        <a href="#services" class="font-medium text-slate-700 py-2 border-b border-slate-100">সুবিধাসমূহ</a>
+        <a href="#office" class="font-medium text-slate-700 py-2 border-b border-slate-100">প্রধান কার্যালয়</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="enroll.html" class="text-center bg-brand-red text-white font-bold py-2.5 rounded-xl shadow">ভর্তি আবেদন</a>
+          <a href="tel:01992312710" class="text-center bg-slate-100 text-slate-700 font-bold py-2 rounded-xl text-sm font-en">01992-312710</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Section: Main Academic Programs (Class 9 & 10 Only) -->
+  <main class="flex-grow">
+    
+    <!-- Hero Banner with Poster Integration -->
+    <section class="py-10 md:py-14 bg-gradient-to-b from-slate-100 via-slate-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-6xl mx-auto mb-14">
+          
+          <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-900 font-bold text-xs px-3.5 py-1.5 rounded-full">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>সেশন ২০২৭ | বাংলা ও ইংরেজি ভার্সন</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              SCIENTICA Academic Care<br>
+              <span class="text-brand-teal text-2xl sm:text-3xl md:text-4xl font-bold">৯ম ও ১০ম শ্রেণি একাডেমিক প্রোগ্রাম</span>
+            </h1>
+            
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+              খুলনা বিশ্ববিদ্যালয়ের মেধাবী ও অভিজ্ঞ শিক্ষার্থীবৃন্দের নিবিড় তত্ত্বাবধানে পরিচালিত। ফুল কোর্স অথবা প্রয়োজন অনুযায়ী যেকোনো বিষয়ে আলাদাভাবে ভর্তির সুযোগ!
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="enroll.html" class="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-redHover text-white font-extrabold text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-brand-red/25 transition-all hover:scale-105">
+                <span>অনলাইন ভর্তি আবেদন</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+              <a href="enroll.html?package=trial&fee=0" class="inline-flex items-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-base px-6 py-3.5 rounded-2xl border border-emerald-300 transition-colors">
+                <i data-lucide="gift" class="w-5 h-5 text-emerald-600"></i>
+                <span>ফ্রী ক্লাস করে ভর্তি</span>
+              </a>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-500">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-4 h-4 text-brand-teal"></i>
+                ক্লাস শুরু: ১০ জানুয়ারি, ২০২৭
+              </span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="clock" class="w-4 h-4 text-brand-teal"></i>
+                (শনি-সোম-বুধ) / (রবি-মঙ্গল-বৃহস্পতি)
+              </span>
+            </div>
+          </div>
+
+        <!-- Section Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-10 pt-4 border-t border-slate-200">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+            উপলব্ধ একাডেমিক কোর্সসমূহ
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            ৯ম ও ১০ম শ্রেণির বিজ্ঞান বিভাগের প্রতিটি বিষয়ের স্বতন্ত্র বা ফুল কোর্স প্যাকেজ
+          </p>
+        </div>
+
+        <!-- Program Cards Grid (Class 9 & 10) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          <!-- Card 1: Class 9 Academic Program -->
+          <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+            
+            <div class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6 sm:p-8 overflow-hidden border-b border-slate-700">
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <span class="inline-block bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  বাংলা ও ইংরেজি ভার্সন
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                  <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                  ভর্তি চলছে
+                </span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">
+                ৯ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭
+              </h3>
+              <p class="text-amber-300 font-semibold text-sm sm:text-base mt-1">
+                A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-2">
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-lg">
+                  ফুল কোর্স: <strong class="text-amber-300 text-sm font-en">৳5,000</strong>
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-lg">
+                  প্রতি বিষয়: <strong class="text-amber-300 text-sm font-en">৳1,000</strong>
+                </span>
+                <span class="bg-emerald-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-lg">
+                  ফ্রী ক্লাস করে ভর্তির সুযোগ
+                </span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+              <div>
+                <ul class="space-y-3.5 text-sm sm:text-base text-slate-700">
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>বিষয়সমূহ:</strong> পদার্থবিজ্ঞান, রসায়ন, গণিত, উচ্চতর গণিত, জীববিজ্ঞান, আইসিটি</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>পরীক্ষা পদ্ধতি:</strong> সাপ্তাহিক, মাসিক, প্র্যাকটিস MCQ এবং সাবজেক্ট ফাইনাল এক্সাম</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>অনলাইন পোর্টাল:</strong> শিক্ষার্থী এবং অভিভাবকদের জন্য পৃথক আধুনিক অনলাইন পোর্টাল</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>ব্যাচ শিডিউল:</strong> (শনি-সোম-বুধ) অথবা (রবি-মঙ্গল-বৃহস্পতি)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>শুরুর তারিখ:</strong> ১০ জানুয়ারি, ২০২৭ (ফ্রী ট্রায়াল ক্লাস উন্মুক্ত)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-8 pt-6 border-t border-slate-100 space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="program-detail.html?class=9" class="w-full inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm py-3 px-4 rounded-xl transition-colors">
+                    <i data-lucide="info" class="w-4 h-4 text-slate-500"></i>
+                    <span>বিস্তারিত দেখুন</span>
+                  </a>
+                  <a href="enroll.html?class=9&package=trial&fee=0" class="w-full inline-flex items-center justify-center gap-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-sm py-3 px-4 rounded-xl border border-emerald-200 transition-colors">
+                    <i data-lucide="play-circle" class="w-4 h-4 text-emerald-600"></i>
+                    <span>ফ্রী ক্লাস ট্রায়াল</span>
+                  </a>
+                </div>
+                <a href="enroll.html?class=9&package=full&fee=5000" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-teal to-emerald-600 hover:from-brand-tealDark hover:to-emerald-700 text-white font-bold text-base py-3.5 px-4 rounded-xl shadow-md shadow-brand-teal/20 transition-all hover:scale-[1.01]">
+                  <span>সরাসরি ভর্তি আবেদন</span>
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Class 10 Academic Program -->
+          <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+            
+            <div class="relative bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white p-6 sm:p-8 overflow-hidden border-b border-slate-700">
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <span class="inline-block bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  বাংলা ও ইংরেজি ভার্সন
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-amber-400 text-slate-900 text-xs font-black px-3 py-1 rounded-full shadow-sm">
+                  <span class="w-2 h-2 rounded-full bg-slate-900 animate-pulse"></span>
+                  নতুন ব্যাচ
+                </span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">
+                ১০ম শ্রেণি একাডেমিক প্রোগ্রাম ২০২৭
+              </h3>
+              <p class="text-amber-300 font-semibold text-sm sm:text-base mt-1">
+                A+ পাওয়া নয়, লক্ষ্য বোর্ড স্ট্যান্ড করা
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-2">
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-lg">
+                  ফুল কোর্স: <strong class="text-amber-300 text-sm font-en">৳5,000</strong>
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-lg">
+                  প্রতি বিষয়: <strong class="text-amber-300 text-sm font-en">৳1,000</strong>
+                </span>
+                <span class="bg-emerald-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-lg">
+                  ফ্রী ক্লাস করে ভর্তির সুযোগ
+                </span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+              <div>
+                <ul class="space-y-3.5 text-sm sm:text-base text-slate-700">
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-teal-100 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>বিষয়সমূহ:</strong> পদার্থবিজ্ঞান, রসায়ন, গণিত, উচ্চতর গণিত, জীববিজ্ঞান, আইসিটি</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-teal-100 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>পরীক্ষা পদ্ধতি:</strong> সাপ্তাহিক, মাসিক, প্র্যাকটিস MCQ এবং সাবজেক্ট ফাইনাল এক্সাম</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-teal-100 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>অনলাইন পোর্টাল:</strong> শিক্ষার্থী এবং অভিভাবকদের জন্য পৃথক আধুনিক অনলাইন পোর্টাল</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-teal-100 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>ব্যাচ শিডিউল:</strong> (শনি-সোম-বুধ) অথবা (রবি-মঙ্গল-বৃহস্পতি)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full bg-teal-100 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span><strong>শুরুর তারিখ:</strong> ১০ জানুয়ারি, ২০২৭ (ফ্রী ট্রায়াল ক্লাস উন্মুক্ত)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-8 pt-6 border-t border-slate-100 space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="program-detail.html?class=10" class="w-full inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm py-3 px-4 rounded-xl transition-colors">
+                    <i data-lucide="info" class="w-4 h-4 text-slate-500"></i>
+                    <span>বিস্তারিত দেখুন</span>
+                  </a>
+                  <a href="enroll.html?class=10&package=trial&fee=0" class="w-full inline-flex items-center justify-center gap-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-sm py-3 px-4 rounded-xl border border-emerald-200 transition-colors">
+                    <i data-lucide="play-circle" class="w-4 h-4 text-emerald-600"></i>
+                    <span>ফ্রী ক্লাস ট্রায়াল</span>
+                  </a>
+                </div>
+                <a href="enroll.html?class=10&package=full&fee=5000" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-red to-rose-600 hover:from-brand-redHover hover:to-rose-700 text-white font-bold text-base py-3.5 px-4 rounded-xl shadow-md shadow-brand-red/20 transition-all hover:scale-[1.01]">
+                  <span>সরাসরি ভর্তি আবেদন</span>
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Section: Online Portal Facilities (from Poster) -->
+    <section id="services" class="py-16 bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold text-brand-teal uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+            আধুনিক ডিজিটাল শিক্ষা ব্যবস্থা
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+            অনলাইন পোর্টাল ও বিশেষ সুবিধাসমূহ
+          </h2>
+          <p class="text-slate-600 text-base mt-2">
+            শিক্ষার্থী ও অভিভাবকদের জন্য প্রস্তুতকৃত পৃথক ডিজিটাল পোর্টাল
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          
+          <!-- Item 1 -->
+          <div class="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-brand-teal flex items-center justify-center mb-4">
+              <i data-lucide="monitor-play" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800">ক্লাস ও ক্লাস নোট পোর্টাল</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              শিক্ষার্থীরা তাদের প্রতিটি ক্লাসের লেকচার, রিভিশন ক্লাস ও ডিজিটাল নোট সরাসরি পোর্টালে দেখতে পারবে।
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-brand-teal flex items-center justify-center mb-4">
+              <i data-lucide="bell-ring" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800">অভিভাবক লাইভ ট্র্যাকিং</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              অভিভাবকগণ সন্তানের ক্লাসে উপস্থিতি ও পরীক্ষার ফলাফল প্রকাশিত হওয়া মাত্রই নোটিফিকেশনের মাধ্যমে জানতে পারবেন।
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-brand-teal flex items-center justify-center mb-4">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800">বহুমাত্রিক পরীক্ষা পদ্ধতি</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              নিয়মিত সাপ্তাহিক পরীক্ষা, মাসিক মূল্যায়ন, প্র্যাকটিস MCQ এবং চূড়ান্ত সাবজেক্ট ফাইনাল এক্সাম।
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-2xl border border-slate-200/80 transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-brand-teal flex items-center justify-center mb-4">
+              <i data-lucide="gift" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-800">ফ্রী ক্লাস করে ভর্তির সুযোগ</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              কোনো অগ্রিম ফি ছাড়া প্রথম সপ্তাহে সরাসরি ফ্রি ক্লাস ও পরীক্ষা দিয়ে ক্লাসের মান যাচাই করার সুযোগ।
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Section: Dedicated Office Information Banner -->
+    <section id="office" class="py-14 bg-gradient-to-r from-slate-900 to-slate-950 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-white/15 flex flex-col md:flex-row items-center justify-between gap-8">
+          
+          <div class="space-y-4 max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-brand-gold/20 text-brand-gold font-bold text-xs px-3.5 py-1.5 rounded-full border border-brand-gold/30">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>আমাদের প্রধান কার্যালয়</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+              সরাসরি অফিসে এসে যোগাযোগ ও ফি পরিশোধ
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              অনলাইনে কোনো ফি দেওয়ার প্রয়োজন নেই। অনলাইনে আবেদন ফরম পূরণ করে সরাসরি আমাদের অফিসে এসে অথবা ক্লাস শুরুর দিন উপস্থিত হয়ে ভর্তি নিশ্চিত ও ফি পরিশোধ করতে পারবেন।
+            </p>
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm text-slate-200">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pinned" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                <span class="font-medium">প্রধান কার্যালয়: ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+            <a href="enroll.html" class="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-redHover text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg transition-transform hover:scale-105 text-center">
+              <span>ভর্তি আবেদন করুন</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="tel:01992312710" class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-bold text-base px-5 py-3.5 rounded-xl border border-white/20 transition-colors text-center font-en">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+              <span>01992-312710</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Deep Purple Footer -->
+  <footer class="bg-brand-purple text-slate-300 border-t border-purple-900/60 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-purple-800/60">
+        
+        <!-- Col 1: Institute Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-teal flex items-center justify-center text-white font-bold text-xl">
+              <i data-lucide="atom" class="w-6 h-6"></i>
+            </div>
+            <span class="text-xl font-black text-white tracking-tight font-en">SCIENTICA</span>
+          </div>
+          <p class="text-sm text-purple-200/80 leading-relaxed">
+            খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী দ্বারা পরিচালিত। বিজ্ঞান বিভাগের শিক্ষার্থীদের জন্য নির্ভরযোগ্য ও মানসম্মত শিক্ষা প্রতিষ্ঠান।
+          </p>
+          <div class="pt-2 text-xs text-purple-200/70">
+            <p class="font-bold text-white mb-1">প্রধান কার্যালয়:</p>
+            <p>১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Help Links -->
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">সহায়তা (Help)</h4>
+          <ul class="space-y-2.5 text-sm text-purple-200/80">
+            <li><a href="index.html" class="hover:text-white transition-colors">আমাদের সম্পর্কে</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">অনলাইন পোর্টাল সুবিধা</a></li>
+            <li><a href="#office" class="hover:text-white transition-colors">অফিস ও যোগাযোগ</a></li>
+            <li><a href="enroll.html?package=trial&fee=0" class="hover:text-white transition-colors">ফ্রী ক্লাস নিয়মাবলী</a></li>
+            <li><a href="enroll.html" class="hover:text-white transition-colors">ভর্তি আবেদন ফরম</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore Programs -->
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">প্রোগ্রামসমূহ (Explore)</h4>
+          <ul class="space-y-2.5 text-sm text-purple-200/80">
+            <li><a href="program-detail.html?class=9" class="hover:text-white transition-colors">৯ম শ্রেণি একাডেমিক ফুল কোর্স</a></li>
+            <li><a href="program-detail.html?class=10" class="hover:text-white transition-colors">১০ম শ্রেণি একাডেমিক ফুল কোর্স</a></li>
+            <li><a href="program-detail.html?class=9" class="hover:text-white transition-colors">পদার্থ, রসায়ন, গণিত, জীববিজ্ঞান</a></li>
+            <li><a href="program-detail.html?class=10" class="hover:text-white transition-colors">উচ্চতর গণিত ও আইসিটি</a></li>
+            <li><a href="enroll.html?package=trial&fee=0" class="hover:text-white transition-colors">ফ্রী ডেমো ক্লাস</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Get in Touch -->
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">যোগাযোগ (Get In Touch)</h4>
+          <div class="space-y-3 text-sm text-purple-200/80">
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+              <span>হেল্পলাইন: <span class="font-en font-bold text-white">01992-312710</span></span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>
+              <span>বয়রা, খুলনা</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i>
+              <span>শুরু: ১০ জানুয়ারি, ২০২৭</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="pt-8 text-center text-xs text-purple-300/60">
+        <p>© 2026 SCIENTICA Academic Care । সর্বস্বত্ব সংরক্ষিত । প্রধান কার্যালয়: ১৩, জলিল স্মরণী, বয়রা মহিলা কলেজের সামনে, বয়রা, খুলনা।</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
